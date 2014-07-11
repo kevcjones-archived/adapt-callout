@@ -32,16 +32,12 @@ define(["coreViews/componentView", "coreJS/adapt"], function(ComponentView, Adap
 
         openCallout: function (event) {
             event.preventDefault();
-            // var currentCallout = $(event.currentTarget).data('id'); //data-id
+            var currentCallout = $(event.currentTarget).data('callout'); //data-callout
+            var calloutObject = this.model.get('_callouts')[currentCallout];
             // this.$('.callout-item').hide().removeClass('active'); //hide all
             // this.$('.'+currentCallout).show().addClass('active'); //show only clicked one
-            console.log("clicked");
-            var calloutobject = {
-                title: "Title Goes Here",
-                body:"<img style='float:left;margin:5px' src='http://placehold.it/300x300'><p>    !Arne Astrup is Head of the <a class=\"callout-trigger\" href=\"javascript:void(0);\">Department of Nutrition,</a> Exercise and Sports at the Faculty of Science, University of Copenhagen, Denmark. He is Director of the    Nordea Foundation funded OPUS research centre.</p>"
-            };
-
-            Adapt.trigger('notify:popup',calloutobject);
+            
+            Adapt.trigger('notify:popup',calloutObject);
         }
 
         
