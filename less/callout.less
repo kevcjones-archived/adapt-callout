@@ -1,0 +1,25 @@
+.callout-component {
+	
+   span.callout-trigger,
+   p.callout-trigger,
+   a.callout-trigger
+   {
+      color:@primary-color;
+      text-decoration:underline;
+   }
+
+
+}
+
+
+.no-touch {
+	.callout-component {
+      span.callout-trigger,
+      p.callout-trigger,
+      a.callout-trigger {
+         &:hover {
+           color: @item-hover-color;
+         }
+      }
+	}
+}
