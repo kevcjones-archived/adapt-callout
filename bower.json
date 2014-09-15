@@ -1,6 +1,7 @@
 {
   "name": "adapt-callout",
   "version": "0.0.1",
+  "repository": "git://github.com/KevCJones/adapt-callout.git",
   "homepage": "https://github.com/KevCJones/adapt-callout",
   "authors": [
     "Kevin Jones <him@kevincjones.co.uk>"

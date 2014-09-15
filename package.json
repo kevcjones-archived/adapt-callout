@@ -1,7 +1,7 @@
-{
+  {
   "name": "adapt-callout",
-  "version": "0.0.1",
-  "description": "Description of your component",
+  "version": "0.0.2",
+  "description": "Tap/Clickable text which trigger the core functionality to show popups / callouts and dialogs...",
   "main": "",
   "scripts": {
     "test": "./node_modules/.bin/karma start --single-run --browsers PhantomJS"

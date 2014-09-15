@@ -1,34 +1,22 @@
-
-#WORK IN PROGRESS
-#adapt-component
-
-
-A basic component skeleton to help developers create components. All components should have a readme that contains the following:
-
-* Title and Description
-* Installation
-* Usage
-* Settings overview
-* Limitations
-* Browser spec
-
-Further details on developing components can be found on the [wiki](https://github.com/adaptlearning/adapt_framework/wiki) here: [Developing-plugins](https://github.com/adaptlearning/adapt_framework/wiki/Developers-guide:-components).
+#adapt-callout
 
 ##Installation
 
-Please describe the steps required to install your plugin. You should also detail any dependencies that are not part of the package.json file.
+```adapt install adapt-callout```
 
 
 ##Usage
 
-Some details of how the plugin might be used should be given here.
+Any span or anchor tag which is given the 'callout-trigger' class within the components html body content will be a callout trigger. The data-callout attribute will contain the callout ID which needs to be shown.
+
+```
+<a class="callout-trigger" data-callout="disclaimer" href="javascript:void(0);">View Disclaimer</a>
+```
+
+Inside the json config you will need to have a _callouts list which contains the the title and body for the callout itself.
 
 
 ##Settings overview
-
-Each component should come with an example.json which contains an example of the data structure needed for this component to work. This enables developers to copy this over without the need for an editor. 
-
-Developers should give some description for data expected for their component and what the setting does. The example.json file for a basic component would contain at least the following:
 
 ```
 {
@@ -43,21 +31,28 @@ Developers should give some description for data expected for their component an
     "body":"",
     "instruction":""
 }
+{
+    "_id":"c-05",
+    "_parentId":"b-05",
+    "_type":"component",
+    "_component":"callout",
+    "_classes":"",
+    "_layout":"full",
+    "_direction":"right",        
+    "title": "",
+    "displayTitle": "Authors of this module",
+    "body": "Body text goes here in your block. <a class='callout-trigger' data-callout='disclaimer' href='javascript:void(0);'>View Disclaimer</a>",
+    "_callouts": {
+         "disclaimer" : {
+            "title" : "Disclaimer",
+            "body" : "Callout text goes here..."
+        }
+    }
+}
 ```
-A description of the core settings can be found at: (Core model attributes)[https://github.com/adaptlearning/adapt_framework/wiki/Core-model-attributes]
 
-
-### Data description
-
-All attributes for your component should be described here. A description for core attributes can be found here: {Core-model-attributes}(https://github.com/adaptlearning/adapt_framework/wiki/Core-model-attributes)
-
-
-Each component should also contain a schema.json file. This is a JSON schema of example.json. This file is needed for the component to work with the editor. It describes what fields are needed to edit the component. 
 
 ##Limitations
 
-Please detail any limitation of your component.
+Currently this is a work in progress. I plan on extending it beyond the built in callback styles to include some callout hovers for less of a takeover effect. But thats going to be as needed.
 
-##Browser spec
-
-If you have detailed browser spec you should detail them here.
