@@ -1,6 +1,6 @@
   {
   "name": "adapt-callout",
-  "version": "0.0.2",
+  "version": "0.0.21",
   "description": "Tap/Clickable text which trigger the core functionality to show popups / callouts and dialogs...",
   "main": "",
   "scripts": {
